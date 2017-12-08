@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!-- Head Of Website -->
+
+<head>
+
+	<!-- My CSS Stylesheet Links -->
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+
+	<title> Beans &amp; Brews </title>
+
+	<!-- Google Font Links & Icon Links-->
+	<!-- <script src="https://use.fontawesome.com/92c41c2648.js"></script> -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Josefin+Sans|Nunito+Sans|Sanchez|Source+Serif+Pro" rel="stylesheet">
+
+	<!-- Firebase Link -->
+
+	<script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+
+	<!--jQueryJS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+<!--BOOTSTRAP-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<!-- Body of Website -->
+
+<body>
+
+	<!-- Header & Navigation Bar For Website -->
+	<header>
+
+		<!-- <nav class="nav">
+			<ul class="list-items">
+				<li><a href="index.html" class="active"> HOME </a></li>
+				<li><a href="search.html"> SEARCH </a></li>
+				<li><a href="instructions.html"> HOW IT WORKS </a></li>
+				<li><a href="about.html"> ABOUT BEANS &amp; BREWS </a></li>
+			</ul>
+
+			<div id="nav-icon3">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</nav> -->
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+		<br>
+		<br>
+
+		<div class="container">
+			<h2>Beans and Brews</h2>
+
+		</div>
+
+		<div class="container">
+			<div class="jumbotron">
+
+			<br>
+			<button onclick="beerQuery()" type="button" id="searchbeerButton" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Best house brews in Austin</button>
+
+			<button onclick="coffeeQuery()" type="button" id="searchcoffeeButton" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Best coffee spots in Austin</button>
+
+			<br>
+			<br>
+
+			<button onclick="runQuery()" type="button" id="bestcoffeeButton" class="btn btn-primary">Best coffee spots in Austin</button>
+
+			<button onclick="runbestbeerQuery()" type="button" id="bestbrewsButton" class="btn btn-primary">Best house brews in Austin</button>
+		</div>
+	</div>
+	</header>
+	<br>
+
+	<!---thi is the results panel for coffe options -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h1 class="panel-title"><b>Best coffee spots in town: </b></h1>
+				</div>
+				<br>
+				<div class="panel-body">
+					<div id="coffeeResult" class="well"><b>Names: </b>
+					</div>
+					<div id="locationCoffee" class="well"><b>Addresses: </b>
+					</div>
+					<div id="ratingCoffee" class="well">
+						<b>User Ratings: </b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+<!--this is the results panel for beer options-->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1 class="panel-title"><b>Best beer spots in town: </b></h1>
+			</div>
+			<br>
+			<div class="panel-body">
+				<div id="beerResult" class="well"><b>Name: </b>
+				</div>
+				<div id="beerLocation" class="well">
+					<b>Addresses: </b>
+				</div>
+				<div id="beerRating" class="well">
+					<b>User Ratings: </b>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<!--tis is the results panel for the best beer in town-->
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1 class="panel-title"><b>Best beer spots in town: </b></h1>
+			</div>
+			<br>
+			<div class="panel-body">
+				<div id="bestbeerResult" class="well">
+				</div>
+				<div id="locationBestbeer" class="well">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<!--tis is the results panel for the best coffee in town-->
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1 class="panel-title"><b>Best coffee spots in town: </b></h1>
+			</div>
+			<br>
+			<div class="panel-body">
+				<div id="bestcoffeeResult" class="well">
+				</div>
+					<div id="locationBestcoffee" class="well">
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<!--test2.js -->
+	<script type="text/javascript" src="zomatoLogic.js"></script>
+
+</body>
+</html>

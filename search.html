@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!-- Head Of Website -->
+	<head>
+
+	<!-- My CSS Stylesheet Links -->
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+		<title> Beans &amp; Brews: Search </title>
+
+	<!-- Google Font Links & Icon Links-->
+		<script src="https://use.fontawesome.com/92c41c2648.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Raleway|Merriweather" rel="stylesheet">
+
+	<!-- Link to Moment.js -->
+   		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+	<!-- JavaScript & jQuery & Firebase Links -->
+	</head>
+
+
+<!-- Body of Website -->
+	<body>
+
+	<!-- Header & Navigation Bar For Website -->
+		<header>
+			<i id="hamburger-nav" class="fa fa-bars mobile-only ham-nav-search" aria-hidden="true"></i>
+
+			<div id="overlay">
+				<div>
+
+				<i id="exit-btn" class="fa fa-times" aria-hidden="true"></i>
+
+					<nav class="nav">
+						<ul class="list-items overlay-content">
+							<li><a href="index.html"> HOME </a></li>
+							<li class="line-brake-nav"> | </li>
+							<li><a href="search.html" class="active"> SEARCH </a></li>
+							<li class="line-brake-nav"> | </li>
+							<li><a href="about.html"> BEANS &amp; BREWS </a></li>
+				        </ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+
+	<!-- Iniput Form For Search Results -->
+		<div id="body-background">
+			<h1 id="searchTitle"> Search: </h1>
+			<form id="search-form">
+			<!--  Selection For Beverage Choice -->
+			  	<div class="form-group">
+			    	<label for="destination-select"> COFFEE/BEER/BOTH? </label>
+			    	<select id="destination-select">
+				        <option selected> Beverage Choice... </option>
+				        <option value="1">Coffee</option>
+				        <option value="2">Brews</option>
+				        <option value="3">Both</option>
+				    </select>
+			  	</div>
+
+			<!-- Search By Name Input Field -->
+			  	<div class="form-group">
+			  		<label for="search"> SEARCH BY NAME </label>
+			    	<input type="text" id="pac-input" class="controls" placeholder="Search By Name">
+			  	</div>
+			  	<hr>
+
+			<!--  Zipcode Search Input Field -->
+			  	<div class="form-group">
+			    	<label for="zipcode"> ZIPCODE </label>
+			    	<input type="search" id="zipcode" placeholder="Zipcode">
+			  	</div>
+
+			<!--  Selection For Miles Away Distance -->
+			  	<div class="form-group">
+			    	<label for="miles-away"> MILES AWAY </label>
+			    	<select id="miles-away">
+				        <option selected> Miles Away </option>
+				        <option value="1">1</option>
+				        <option value="2">5</option>
+				        <option value="3">10</option>
+				        <option value="4">15</option>
+				        <option value="5">20</option>
+				        <option value="6">25</option>
+				        <option value="7">30</option>
+				    </select>
+			  	</div>
+				<hr>
+
+			<!-- Search Button -->
+			  	<button type="search" id="search-btn"> SEARCH </button>
+					<button  id="zRec">ZOMATO TIPS</button>
+			</form>
+
+			<!-- Map Appears Here -->
+			<div id="map"> </div>
+			<!-- <div id="pic"> </div> -->
+			<!-- <div id="map2" style="float:left;width:70%; height:100%"></div>
+<div id="directionsPanel" style="float:right;width:30%;height 100%"></div> -->
+
+
+		</div>
+
+
+
+	<!-- Empty Div For Google Maps -->
+		<section id="search-results">
+
+			<div id="searchButtons"><h1 id="searchResultsTitle"> Search Results: </h1></div>
+			<div id="name"></div>
+			<div id="rating"></div>
+			<div id="price-level"></div>
+		</section>
+
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <p id="mLocName">Here's some info</p>
+				<p id="mLocRating">Here's some more info</p>
+				<p id="userRates">Yo dawg what up?</p>
+				<p id="mLocVicinity">Here's some more info</p>
+				<div id="ourRate">
+						<!--build like buttons here-->
+				</div>
+		  </div>
+
+		</div>
+
+
+
+
+
+<!-- Links To Script -->
+	<!-- Link to Moment.js -->
+   		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<!-- JavaScript & jQuery & Firebase Links -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+		<script type="text/javascript" src="assets/javascript/script.js"></script> -->
+
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDmgQV-veLujuFsnttWutIbvARgk27Zud8">
+	</script>
+	<script type="text/javascript" src="assets/javascript/script.js"></script>
+</html>
